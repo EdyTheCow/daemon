@@ -542,6 +542,12 @@ class Docker {
                                 ReadOnly: false,
                             },
                             {
+                                Target: '/home/shared',
+                                Source: '/srv/docker/pterodactyl/data/daemon/daemon-shared',
+                                Type: 'bind',
+                                ReadOnly: true,
+                            },
+                            {
                                 Target: Config.get('docker.timezone_path'),
                                 Source: Config.get('docker.timezone_path'),
                                 Type: 'bind',
